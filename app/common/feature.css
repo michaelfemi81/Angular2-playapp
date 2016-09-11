@@ -1,0 +1,63 @@
+.icon-size {
+    font-size:4.6em;
+   line-height: 30%;
+   outline-width:20%;
+   padding:3%;
+   position:relative;
+   }
+
+.shoppingBadge-up{
+   
+    position:absolute;
+    left:28%; /** you can make changes here to change position **/
+    top:-7%;
+    font-size:1.0em;
+    z-index: 2;
+   font-family: "Times New Roman", Georgia, Serif;
+   letter-spacing: 0.2em; 
+   line-height: 100%;
+    background:transparent;
+    color:whitesmoke;
+}
+.shoppingBadge-down{
+   
+    position:absolute;
+    left:28%; /** you can make changes here to change position **/
+    top:7%;
+    font-size:1.0em;
+    z-index: 2;
+   font-family: "Times New Roman", Georgia, Serif;
+   letter-spacing: 0.2em; 
+   line-height: 100%;
+    background:transparent;
+    color:whitesmoke;
+}
+
+.text{
+
+padding:0px;
+margin-left:0px;
+  margin: 30% 20% 20% auto; 
+}
+.text h5{
+color:black;
+   font-family: "Times New Roman", Georgia, Serif;
+   text-align: center;
+vertical-align: middle;
+font-size: 0.5em;
+font-weight:900;
+
+
+}
+.shoppingBadge-right{
+   
+    position:absolute;
+    left:20%; /** you can make changes here to change position **/
+    top:5%;
+    font-size:1.0em;
+    z-index: 2;
+   font-family: "Times New Roman", Georgia, Serif;
+   letter-spacing: 0.2em;
+    background:transparent;
+    color:black;
+}

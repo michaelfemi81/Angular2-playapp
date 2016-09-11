@@ -1,0 +1,14 @@
+<base-chart class="chart"
+           [data]="chart.data"
+         [legend]="!legend"
+           [colors]="pieChartColors"
+         [labels]="pieChartLabels"
+           [showTooltips]="!legend"
+           [tooltipCaretSize]="z"
+           [responsive]="res"
+           [chartType]="pieChartType"
+           (chartHover)="chartHovered($event)"
+           (chartClick)="chartClicked($event)"></base-chart>
+
+             <!---->
+             

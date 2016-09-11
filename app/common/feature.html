@@ -1,0 +1,31 @@
+<div *ngIf="type.isRight">
+    <i class="glyphicon glyphicon-arrow-right icon-size" style="color:RGB(254,216,110) "></i>
+    <span class="badge shoppingBadge shoppingBadge-right">{{type.value}}</span>
+ <div class="text">  
+<h5 >{{type.text}}</h5>
+</div>
+</div>
+<div *ngIf="type.isLeft">
+    <i class="glyphicon glyphicon-arrow-left icon-size" style="color:#7060ff "></i>
+    <span class="badge shoppingBadge shoppingBadge-right">{{type.value}}</span>
+ <div class="text">  
+<h5 >{{type.text}}</h5>
+</div>
+</div>
+ 
+
+ <div *ngIf="type.isUp" >
+    <i class="glyphicon glyphicon-arrow-up icon-size" style="color:RGB(84,128,57)"></i>
+    <span class="badge shoppingBadge shoppingBadge-up">{{type.value}}</span>
+ <div class="text">  
+<h5 >{{type.text}}</h5>
+</div>
+</div>
+
+ <div *ngIf="type.isDown"  >
+    <i class="glyphicon glyphicon-arrow-down icon-size" style="color:RGB(190,7,18);"></i>
+    <span class="badge shoppingBadge shoppingBadge-down">{{type.value}}</span>
+ <div class="text">  
+<h5 >{{type.text}}</h5>
+</div>
+</div>

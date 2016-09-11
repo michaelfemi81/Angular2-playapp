@@ -1,0 +1,244 @@
+#******************************************************************* sms.glance.ng ***********************************************/
+
+server {
+        listen 80;
+
+       server_name sms.glance.ng;
+  
+        access_log /var/log/nginx/sms.awoofapp.com.access.log;
+  
+        error_log /var/log/nginx/sms.awoofapp.com.error.log;
+
+        
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     expired no-cache no-store private auth;
+        gzip_types       text/plain application/xml text/json;
+        gzip_comp_level  7;
+ 
+        location / {
+            proxy_redirect off;
+            proxy_set_header   X-Real-IP            $remote_addr;
+            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header   Host                   $http_host;
+            proxy_set_header   X-NginX-Proxy    true;
+            proxy_set_header   Connection "";
+            proxy_pass http://sms;
+        }
+}
+
+
+
+#******************************************************************* main.glance.ng ***********************************************/
+
+server {
+        listen 80;
+
+       server_name main.glance.ng;
+  
+        access_log /var/log/nginx/payment.awoofapp.com.access.log;
+  
+        error_log /var/log/nginx/payment.awoofapp.com.error.log;
+
+        
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     expired no-cache no-store private auth;
+        gzip_types       text/plain application/xml text/json;
+        gzip_comp_level  7;
+ 
+        location / {
+            proxy_redirect off;
+            proxy_set_header   X-Real-IP            $remote_addr;
+            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header   Host                   $http_host;
+            proxy_set_header   X-NginX-Proxy    true;
+            proxy_set_header   Connection "";
+            proxy_pass http://main;
+        }
+}
+
+
+
+
+#******************************************************************* newsfeed.glance.ng ***********************************************/
+
+server {
+        listen 80;
+
+       server_name newsfeed.glance.ng;
+  
+        access_log /var/log/nginx/newsfeed.awoofapp.com.access.log;
+  
+        error_log /var/log/nginx/newsfeed.awoofapp.com.error.log;
+
+        
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     expired no-cache no-store private auth;
+        gzip_types       text/plain application/xml text/json;
+        gzip_comp_level  7;
+ 
+        location / {
+            proxy_redirect off;
+            proxy_set_header   X-Real-IP            $remote_addr;
+            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header   Host                   $http_host;
+            proxy_set_header   X-NginX-Proxy    true;
+            proxy_set_header   Connection "";
+            proxy_pass http://newsfeed;
+        }
+}
+
+
+#***************************************************** wallet.glance.ng ************************************************************/
+server {
+        listen 80;
+
+       server_name wallet.glance.ng;
+  
+        access_log /var/log/nginx/wallet.awoofapp.com.access.log;
+  
+        error_log /var/log/nginx/wallet.awoofapp.com.error.log;
+
+        
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     expired no-cache no-store private auth;
+        gzip_types       text/plain application/xml text/json;
+        gzip_comp_level  7;
+ 
+        location / {
+            proxy_redirect off;
+            proxy_set_header   X-Real-IP            $remote_addr;
+            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header   Host                   $http_host;
+            proxy_set_header   X-NginX-Proxy    true;
+            proxy_set_header   Connection "";
+            proxy_pass http://wallet;
+        }
+}
+
+#***************************************************** referral.glance.ng ************************************************************/
+server {
+        listen 80;
+
+       server_name referral.glance.ng;
+  
+        access_log /var/log/nginx/refferal.awoofapp.com.access.log;
+  
+        error_log /var/log/nginx/refferal.awoofapp.com.error.log;
+
+        
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     expired no-cache no-store private auth;
+        gzip_types       text/plain application/xml text/json;
+        gzip_comp_level  7;
+ 
+        location / {
+            proxy_redirect off;
+            proxy_set_header   X-Real-IP            $remote_addr;
+            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header   Host                   $http_host;
+            proxy_set_header   X-NginX-Proxy    true;
+            proxy_set_header   Connection "";
+            proxy_pass http://referral;
+        }
+}
+
+#***************************************************** settlement.glance.ng ************************************************************/
+server {
+        listen 80;
+
+       server_name settlement.glance.ng;
+  
+        access_log /var/log/nginx/recharge.awoofapp.com.access.log;
+  
+        error_log /var/log/nginx/recharge.awoofapp.com.error.log;
+
+        
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     expired no-cache no-store private auth;
+        gzip_types       text/plain application/xml text/json;
+        gzip_comp_level  7;
+ 
+        location / {
+            proxy_redirect off;
+            proxy_set_header   X-Real-IP            $remote_addr;
+            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header   Host                   $http_host;
+            proxy_set_header   X-NginX-Proxy    true;
+            proxy_set_header   Connection "";
+            proxy_pass http://recharge;
+        }
+}
+
+#***************************************************** trends.glance.ng ************************************************************/
+server {
+        listen 80;
+
+       server_name trends.glance.ng;
+  
+        access_log /var/log/nginx/trends.awoofapp.com.access.log;
+  
+        error_log /var/log/nginx/trends.awoofapp.com.error.log;
+
+        
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     expired no-cache no-store private auth;
+        gzip_types       text/plain application/xml text/json;
+        gzip_comp_level  7;
+ 
+        location / {
+            proxy_redirect off;
+            proxy_set_header   X-Real-IP            $remote_addr;
+            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header   Host                   $http_host;
+            proxy_set_header   X-NginX-Proxy    true;
+            proxy_set_header   Connection "";
+            proxy_pass http://trends;
+        }
+}
+
+#******************************************************************* glance.ng *********$
+
+server {
+        listen 80;
+
+       #ssl on;
+       #ssl_certificate /root/cert/server.cert.crt;
+       #ssl_certificate_key /root/server.key;
+
+
+       server_name glance.ng;
+  
+        access_log /var/log/nginx/glance.getbonus.ng.access.log;
+  
+        error_log /var/log/nginx/glance.getbonus.ng.error.log;
+
+
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     expired no-cache no-store private auth;
+        gzip_types	 text/plain application/xml text/json;
+        gzip_comp_level  7;
+ 
+        location / {
+            proxy_redirect off;
+            proxy_set_header   X-Real-IP            $remote_addr;
+            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header   Host                   $http_host;
+            proxy_set_header   X-NginX-Proxy    true;
+                    proxy_set_header   Connection "";
+            proxy_pass http://glance;
+        }
+}
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+<div class="row main" >
+   <div class="row">
+     <div class="col-xs-3" >
+         <h4>ChangeList/Build</h4>
+     </div>
+      <div class="col-xs-2" >
+         <h4>Owner</h4>
+     </div>
+      <div class="col-xs-2" >
+         <h4>Time Started</h4>
+     </div>
+     <div class="col-xs-1" >
+         <h4>State</h4>
+     </div>
+     <div class="col-xs-1" >
+         <h4>Metrics</h4>
+     </div>
+     <div class="col-xs-1" >
+         <h4>Build</h4>
+     </div>
+     <div class="col-xs-1" >
+         <h4>Unit Test</h4>
+     </div>
+     <div class="col-xs-1" >
+         <h4>Functional Test</h4>
+     </div>
+   </div>
+
+        
+    
+ <tile *ngFor="let tile of tileDatas"
+ (hideAll)="hideAll($event)" 
+     (popOver)="pop($event)"
+        [hide]="hide"
+        [tileData]="tile"
+       ></tile>
+</div>
+       
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+  
+   
+  <div   *ngIf="popType=='functional'" class="{{data.prog[3].color}}">
+     <div class="{{data.prog[3].color}}text"><span>Functional Test</span></div>
+      <div class="row" style="margin:0px;padding:0px;position:relative;top:-20%"> 
+        <div class="col-xs-9">
+        <test [chartData]="chart2"></test>
+       </div>
+      </div>
+      
+       <div class="row bar" style="margin:0px;padding:0px;"> 
+      <progress  max="100" value="{{fcovered}}"></progress>
+      
+      </div>
+       <div  class="row bart lite" style="margin:0px;padding:0px;"> 
+      <h5>{{fcovered}}%</h5>
+       <h6>code covered</h6>
+      </div>
+
+      <div class="row flow lite" style="margin:0px;padding:0px;"> 
+      <h5>{{fpassed}}%</h5>
+       <h6>tests passed</h6>
+      
+      </div>
+      </div>
+        <div   *ngIf="popType=='unit'" class="{{data.prog[2].color}}">
+     <div class="{{data.prog[3].color}}text"><span>Unit Test</span></div>
+      <div class="row" style="margin:0px;padding:0px;position:relative;top:-20%"> 
+        <div class="col-xs-9">
+        <test [chartData]="chart1"></test>
+       </div>
+      </div>
+      
+       <div class="row bar" style="margin:0px;padding:0px;"> 
+      <progress  max="100" value="{{ucovered}}"></progress>
+      
+      </div>
+       <div  class="row bart lite" style="margin:0px;padding:0px;"> 
+      <h5>{{ucovered}}%</h5>
+       <h6>code covered</h6>
+      </div>
+
+      <div class="row flow lite" style="margin:0px;padding:0px;"> 
+      <h5>{{upassed}}%</h5>
+       <h6>tests passed</h6>
+      
+      </div>
+      </div>
+      <div   *ngIf="popType=='build'" class="{{data.prog[1].color}}">
+          <div class="{{data.prog[1].color}}text"><span>Build</span></div>
+             <build [buildInfo]="data.build"></build>
+          </div>
+
+           <div   *ngIf="popType=='metric'" class="{{data.prog[0].color}}">
+               <div class="{{data.prog[0].color}}text"><span>Metric</span></div>
+         <div style="margin-top:15%;margin-left:33%">      
+<div  class="row" style="margin:0px;padding:0px;width:40%"> 
+   <div class="col-xs-6" style="margin:0px;padding:0px;">
+<feature  [featType]="data.arrowType1"></feature>
+
+</div>
+  <div class="col-xs-6" style="margin:0px;padding:0px;">
+<feature  [featType]="data.arrowType2"></feature>
+
+</div>
+</div>
+
+ <div   class="row" style="margin:0px;padding:0px;width:40%"> 
+   <div class="col-xs-6" style="margin:0px;padding:0px;">
+<feature  [featType]="data.arrowType3"></feature>
+
+</div>
+  <div class="col-xs-6" style="margin:0px;padding:0px;">
+<feature  [featType]="data.arrowType4"></feature>
+
+</div>
+</div>
+</div>
+           </div>
+    </div>
+    
+  </div>      

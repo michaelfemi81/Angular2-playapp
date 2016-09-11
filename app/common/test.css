@@ -1,0 +1,11 @@
+.chart {
+    display: block; width: 100%;
+   padding:0px;
+   margin:0px;
+   left:-30px;
+   top:70px;
+   position: absolute;
+} 
+canvas{ 
+    
+    width:"0" ;height:"0"}

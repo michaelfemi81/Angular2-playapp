@@ -1,0 +1,379 @@
+.tilegreen{
+   
+    border-style: solid;
+    border-width: 3px;
+    border-color:RGB(114,172,77);
+    padding:3px;
+    width:100%;
+    height:80%;
+  margin-top:15%; 
+    
+    box-shadow: 5px 5px 5px #888888;
+   
+}
+img{
+   
+    width: 40%;
+    height:26px;
+    margin: 4px;
+ 
+}
+progress{
+    background-color:  transparent
+}
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+ 
+margin:5px;
+  display: block;
+  width: 80%;
+  height: 25px;
+   background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+.green progress[value]::-webkit-progress-value {
+background-color:RGB(114,172,77);
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+.blue progress[value]::-webkit-progress-value {
+background-color:rgb(94,156,211);;
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+.red progress[value]::-webkit-progress-value {
+background-color:RGB(190,7,18);;
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+.grey progress[value]::-webkit-progress-value {
+background-color:rgb(216,216,216);
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+ progress::-webkit-progress-bar { background-color: rgb(216,216,216);}
+
+ progress::-moz-progress-bar {  background-color: rgb(216,216,216); }
+.group{
+
+
+    width:100%;
+    height:250px;
+  
+ 
+}
+.grComplete, .grAccepted{
+
+     border-style: solid;
+    border-width: 3px;
+    border-color:RGB(114,172,77);
+      box-shadow: 5px 5px 5px #888888;
+        background: RGB(236,241,234); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,RGB(236,241,234) , #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, RGB(236,241,234), #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, RGB(236,241,234), #fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, RGB(236,241,234) , #fff); /* Standard syntax */
+}
+.grFailed, .grRejected{
+
+     border-style: solid;
+    border-width: 3px;
+    border-color:RGB(190,7,18);
+      box-shadow: 5px 5px 5px #888888;
+         background: RGB(251,229,229); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,RGB(251,229,229) , #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, RGB(251,229,229), #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, RGB(251,229,229), #fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, RGB(251,229,229) , #fff); /* Standard syntax */
+}
+.grPending{
+
+     border-style: solid;
+    border-width: 3px;
+    border-color:rgb(216,216,216);
+      box-shadow: 5px 5px 5px #888888;
+              background: rgb(235,239,247); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgb(235,239,247) , #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgb(235,239,247), #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgb(235,239,247), #fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgb(235,239,247) , #fff); /* Standard syntax */
+
+}
+
+.grRunning{
+
+     border-style: solid;
+    border-width: 3px;
+    border-color:rgb(94,156,211);
+      box-shadow: 5px 5px 5px #888888;
+          background: rgb(181,204,225); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgb(181,204,225) , #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgb(181,204,225), #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgb(181,204,225), #fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgb(181,204,225) , #fff); /* Standard syntax */
+}
+.row{
+    padding:0px;
+    margin:0px;
+}
+.met{
+    margin-top: 17px;
+    margin-left:17px;
+}
+.tilered{
+   
+    border-style: solid;
+    border-width: 3px;
+    border-color:RGB(190,7,18);
+     padding:3px;
+    width:100%;
+    height:80%;
+  margin-top:15%; 
+    
+    box-shadow: 5px 5px 5px #888888
+}
+.tilegrey{
+   
+    border-style: solid;
+    border-width: 3px;
+    border-color:rgb(216,216,216);
+     padding:3px;
+    width:100%;
+    height:80%;
+  margin-top:15%; 
+    
+    box-shadow: 5px 5px 5px #888888
+}
+
+.Failedtext span, .Rejectedtext span,.redtext span{
+padding: 0px;
+margin:0px;
+     color:RGB(190,7,18);
+       font-family: "Times New Roman", Georgia, Serif;
+   text-align: left;
+vertical-align: middle;
+font-size: 1.6em;
+
+}
+.Pendingtext span,.greytext span{
+padding: 0px;
+margin:0px;
+     color:#000;
+       font-family: "Times New Roman", Georgia, Serif;
+   text-align: left;
+vertical-align: middle;
+font-size: 1.6em;
+
+}
+.Acceptedtext span, .Completetext span,.greentext span{
+padding: 0px;
+margin:0px;
+  color:RGB(114,172,77);
+       font-family: "Times New Roman", Georgia, Serif;
+   text-align: left;
+vertical-align: middle;
+font-size: 1.6em;
+
+}
+.bar{
+
+    position: absolute;
+    top:80%;
+    width:90%
+    
+}
+.bart{
+
+    position: absolute;
+    top:83%;
+    width:80%;
+    margin:10%;
+   
+    
+}
+.bart h5{
+
+color:rgb(50,80,34);
+     font-size: 1.2em;
+    text-align: center;
+    padding:0px;
+    margin: 0px;
+}
+.bart h6{
+   color:rgb(50,80,34);
+    font-size: 0.7em;
+    text-align: center;
+       padding:0px;
+    margin: 0px;
+}
+.bar progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+ 
+margin:5px;
+  display: block;
+  width: 80%;
+  height: 33px;
+
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+.bar progress::-webkit-progress-bar { background-color: RGB(246,203,174);}
+.bar progress[value]::-webkit-progress-value {
+background-color:rgb(198,223,181);
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+.bar progress::-moz-progress-bar {  background-color: RGB(246,203,174); }
+.bar progress[value]::-moz-progress-value {
+
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+.flow{
+
+     position: absolute;
+     left:43%;
+     top:45%;
+    width:60%;
+    margin:10%;
+}
+.flow h5{
+    color:RGB(114,172,77);
+     font-size: 2.2em;
+    text-align: center;
+    padding:0px;
+    margin: 0px;
+}
+.lite h6{
+  color:rgb(126,58,21);  
+}
+.flow h6{
+    color:#000;
+     font-size: 0.6em;
+    text-align: center;
+    padding:0px;
+    margin: 0px;
+}
+.lite h5{
+    color:rgb(126,58,21);
+
+}
+.result{
+    position: absolute;
+    margin-top:20%; 
+    left:0%;
+
+}
+.result h5{
+     text-align: center; 
+     font-size:1.2em;
+     vertical-align: middle;
+   color: #000;
+   margin-bottom: 30px;
+   margin-top:0px;  
+}
+.result h3{
+     text-align: center; 
+      font-size:1.4em;
+     vertical-align: middle;
+     
+          padding: 0px;
+            margin: 0px;
+}
+.result h2{
+     text-align: center; 
+      font-size:2em;
+     vertical-align: middle;
+    
+     padding: 0px;
+     margin: 0px;
+}
+.result button{
+
+  background-color: rgb(94,156,211) ;
+
+    color: white;
+    padding: 0px 30px;
+     font-family: Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.2em;
+    margin:  auto;
+   height:2.2em;
+   float:none;
+    margin-top:20% ;
+    border-color:RGB(114,172,77);
+    box-shadow: 2px 2px 2px #888888;
+     border: 1px solid rgb(216,216,216);
+    border-radius: 0px;
+}
+
+.demac{
+    margin: 5px;
+}
+
+.colRejected, .colFailed{
+color:rgb(190,7,18);
+}
+.colComplete, .colAccepted{
+color:rgb(114,172,77);
+}
+.colPending{
+color:rgb(216,216,216);
+}
+.colRunning{
+color:rgb(94,156,211);
+}
+.colAccepted2{
+color:RGB(254,216,110)
+}
+
+.topDes{
+padding: 0px;
+margin:0px;
+text-align: left;
+vertical-align: left;
+float:left;
+position: relative;
+
+}
+
+.sel{
+
+ margin-left:30%;
+}
+.sel select{
+background-color: #fff;
+    color: white;
+    padding: 0px 30px;
+     font-family: Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin:  auto;
+   height:2.0em;
+   float:none;
+    margin-top:20% ;
+    color: rgb(94,156,211) ;
+    box-shadow: 2px 2px 2px #888888;
+     border: 2px solid rgb(94,156,211) ;
+    border-radius: 0px;
+}
+.to{
+ position: absolute;
+ top:52%;
+ left:90%
+}

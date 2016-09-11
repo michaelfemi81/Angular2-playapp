@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-6">
+<img src="{{fir}}"/>
+
+<h3 class="{{style1}}">Debug</h3>
+        </div>
+           <div class="col-xs-6">
+<img src="{{sec}}" />
+<h3 class="{{style2}}">Release</h3>
+        </div>
+
+</div>
+<div class="row">
+
+    <!--<h4>{{info.date|date:"hh:mma"|lowercase}} - {{info.date|date:"MM/dd/yy"}}</h4>-->
+        <h4>{{getTime(info.date)}} - {{getDate(info.date)}}</h4>
+</div>

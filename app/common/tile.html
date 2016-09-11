@@ -1,0 +1,173 @@
+ <div class="row gr{{tileData.state}} grad" (click)="Hide()" >
+   <div class="row">
+     <div class="col-xs-1 " style="margin:0;padding:0;">
+          <img src="app/logo/{{tileData.type}}{{tileData.state}}.png"/>
+        </div>
+        <div class="col-xs-2 topDes">
+          <h5  class="col{{tileData.state}}">{{tileData.itemid}}</h5>
+        </div>
+        <div  class="col-xs-2 topDes">
+          <h5   class="col{{tileData.state}}">{{tileData.owner}}</h5>
+        </div>
+        <!--<div class="col-xs-2 topDes">
+          <h5  class="col{{tileData.state}}">{{tileData.timeStarted|date:"MM/dd/yy"}}  {{tileData.timeStarted|date:"hh:mma"|lowercase}}</h5>
+        </div>-->
+               <div class="col-xs-2 topDes">
+          <h5  class="col{{tileData.state}}">{{getDate(tileData.timeStarted)}}  {{getTime(tileData.timeStarted)}}</h5>
+        </div>
+        <div class="col-xs-1 ">
+          <h5  class="col{{tileData.state}}">{{tileData.state}}</h5>
+        </div>
+        <div class="col-xs-1 {{tileData.prog[0].color}} prog" *ngIf="hidden">
+          <progress  max="100" value="{{tileData.prog[0].value}}"></progress>
+        </div>
+       <div class="col-xs-1 {{tileData.prog[1].color}}" *ngIf="hidden">
+          <progress  max="100" value="{{tileData.prog[1].value}}"></progress>
+        </div>
+        <div class="col-xs-1 {{tileData.prog[2].color}}" *ngIf="hidden">
+          <progress  max="100" value="{{tileData.prog[2].value}}"></progress>
+        </div>
+        <div class="col-xs-1 {{tileData.prog[3].color}}" *ngIf="hidden">
+          <progress  max="100" value="{{tileData.prog[3].value}}"></progress>
+        </div>
+     </div> 
+  <div class="row group" *ngIf="!hidden">
+    <div class="col-xs-5 row">
+    <div class="col-xs-6" (click)="modal($event,'metric',tileData.prog[0].color)">
+<div class="tile{{tileData.prog[0].color}}">
+  <div class="{{tileData.prog[0].color}}text"><span>Metric</span></div>
+  <div class="met">
+ <div *ngIf="tileData.prog[0].color!=='grey'" class="row" style="margin:0px;padding:0px;"> 
+   <div class="col-xs-6" style="margin:0px;padding:0px;">
+<feature  [featType]="tileData.arrowType1"></feature>
+
+</div>
+  <div class="col-xs-6" style="margin:0px;padding:0px;">
+<feature  [featType]="tileData.arrowType2"></feature>
+
+</div>
+</div>
+
+ <div *ngIf="tileData.prog[0].color!=='grey'"  class="row" style="margin:0px;padding:0px;"> 
+   <div class="col-xs-6" style="margin:0px;padding:0px;">
+<feature  [featType]="tileData.arrowType3"></feature>
+
+</div>
+  <div class="col-xs-6" style="margin:0px;padding:0px;">
+<feature  [featType]="tileData.arrowType4"></feature>
+
+</div>
+</div>
+ <div *ngIf="tileData.prog[0].color=='grey'" class="row" style="margin:0px;padding:0px;"> 
+        
+       <h3>Cannot not get Metric (Did not Run)</h3>
+       
+      </div>
+  </div>
+</div>
+</div>
+<div class="col-xs-6" (click)="modal($event,'build',tileData.prog[1].color)">
+<div class="tile{{tileData.prog[1].color}}">
+  <div class="{{tileData.prog[1].color}}text"><span>Build</span></div>
+  <div *ngIf="tileData.prog[1].color!=='grey'" class="row" style="margin:0px;padding:0px;"> 
+    <build [buildInfo]="tileData.build"></build>
+    </div>
+     <div *ngIf="tileData.prog[1].color=='grey'" class="row" style="margin:0px;padding:0px;"> 
+        
+       <h3>Did not Build</h3>
+       
+      </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xs-5 row">
+  <div class="col-xs-6" (click)="modal($event,'unit',tileData.prog[2].color)">
+ <div class="tile{{tileData.prog[2].color}}">
+  <div class="{{tileData.prog[2].color}}text"><span>Unit Test</span></div>
+      <div *ngIf="tileData.prog[2].color!=='grey'" class="row" style="margin:0px;padding:0px;"> 
+        <test [chartData]="tileData.chart1"></test>
+      </div>
+      <div *ngIf="tileData.prog[2].color!=='grey'" class="row bar" style="margin:0px;padding:0px;"> 
+      <progress  max="100" value="{{this.tileData.chart1.extra[1]}}"></progress>
+      
+      </div>
+       <div *ngIf="tileData.prog[2].color=='grey'" class="row" style="margin:0px;padding:0px;"> 
+        
+       <h3>Test Did not run</h3>
+       
+      </div>
+       <div *ngIf="tileData.prog[2].color!=='grey'" class="row bart" style="margin:0px;padding:0px;"> 
+      <h5>{{this.tileData.chart1.extra[1]}}%</h5>
+       <h6>code covered</h6>
+      </div>
+      <div *ngIf="tileData.prog[2].color!=='grey'" class="row flow" style="margin:0px;padding:0px;"> 
+      <h5>{{this.tileData.chart1.extra[0]}}%</h5>
+       <h6>tests passed</h6>
+      </div>
+      </div>
+      </div>
+      <div class="col-xs-6" (click)="modal($event,'functional',tileData.prog[3].color)">
+     <div class="tile{{tileData.prog[3].color}}">
+  <div class="{{tileData.prog[3].color}}text"><span>Functional Test</span></div>
+      <div *ngIf="tileData.prog[3].color!=='grey'" class="row" style="margin:0px;padding:0px;"> 
+        
+        <test [chartData]="tileData.chart2"></test>
+       
+      </div>
+      <div *ngIf="tileData.prog[3].color=='grey'" class="row" style="margin:0px;padding:0px;"> 
+        
+       <h3>Test Did not run</h3>
+       
+      </div>
+       <div *ngIf="tileData.prog[3].color!=='grey'" class="row bar" style="margin:0px;padding:0px;"> 
+      <progress  max="100" value="{{this.tileData.chart2.extra[1]}}"></progress>
+      
+      </div>
+       <div *ngIf="tileData.prog[3].color!=='grey'" class="row bart lite" style="margin:0px;padding:0px;"> 
+      <h5>{{this.tileData.chart2.extra[1]}}%</h5>
+       <h6>code covered</h6>
+      </div>
+
+      <div *ngIf="tileData.prog[3].color!=='grey'" class="row flow lite" style="margin:0px;padding:0px;"> 
+      <h5>{{this.tileData.chart2.extra[0]}}%</h5>
+       <h6>tests passed</h6>
+      </div>
+      </div>
+      </div>
+      </div>
+     <div class="col-xs-2">
+       <div  class="result">
+         <h5>Result:</h5>
+       <h3 *ngIf="tileData.state!='Complete'&&tileData.state!='Accepted'" class="col{{tileData.state}}">Change {{tileData.state}}</h3>
+       <h2 *ngIf="tileData.state!='Complete'&&tileData.state!='Accepted'" class="col{{tileData.state}}">{{tileData.reason}}</h2>
+       <h3 *ngIf="tileData.state=='Accepted'" class="col{{tileData.state}}2">Change {{tileData.state}}</h3>
+       <h2 *ngIf="tileData.state=='Accepted'" class="col{{tileData.state}}2">{{tileData.reason}}</h2>
+       <h2 *ngIf="tileData.state=='Complete'" class="col{{tileData.state}}">{{tileData.state}}</h2>
+       
+       <button *ngIf="tileData.state=='Accepted'" (click)="but($event)"><span style="word-spacing:0.01em" class="glyphicon glyphicon-search" ></span> Merged Build</button>
+       <button *ngIf="tileData.state=='Rejected'||tileData.state=='Failed'" (click)="but($event)" > Find Issues</button>
+      
+       <div *ngIf="tileData.state=='Complete'" class="row">
+       <div class="col-xs-9" style="margin:0px;padding:0px;"> <button (click)="but($event)"> Deploy</button>  </div>
+        <div class="col-xs-3 to" > <h4 class="col{{tileData.state}}">to:</h4></div>
+
+        </div>
+             <div *ngIf="tileData.state=='Complete'" class="row sel">
+          <select (click)="sel($event)" >
+   
+    <option>Development</option>
+    <option>Production</option>
+      </select>
+        </div>
+
+  
+</div>
+       </div>
+       </div>
+     </div>
+
+<div class="row demac">
+
+  </div>
+
+  
